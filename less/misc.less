@@ -1,0 +1,65 @@
+.reveal .fa {
+  font-family: FontAwesome !important;
+  font-style: normal !important;
+}
+
+.reveal ol, .reveal ul {
+  display: block;
+}
+
+.reveal ul.no-dot {
+    list-style-type: none;
+    li > i {
+      padding-right: 1em;
+    }
+}
+
+.reveal img.no-decoration {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal pre code.no-scroll {
+  overflow: hidden;
+  max-height: initial;
+}
+
+.reveal .left {
+  text-align: left;
+}
+
+.reveal .right {
+  text-align: right;
+}
+
+.reveal blockquote {
+  width: inherit;
+  footer {
+    font-size: 70%;
+    color: #999;
+    cite:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+/**
+ * Grid System
+ */
+.grid {
+  display: flex;
+}
+.grid-cell {
+  flex: 1;
+}
+.grid-cell--top {
+  align-self: flex-start;
+}
+.grid-cell--bottom {
+  align-self: flex-end;
+}
+.grid-cell--center {
+  align-self: center;
+}
+

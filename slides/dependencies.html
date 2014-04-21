@@ -1,0 +1,74 @@
+<section>
+<h2>Manage Dependencies</h2>
+</section>
+
+<section>
+<h2>Some popular dependency managers</h2>
+<ul>
+  <li>Bower: <a href="http://yeoman.io/">http://bower.io</a></li>
+  <li>Ender: <a href="http://ender.jit.su/">http://ender.jit.su</a></li>
+  <li>Component: <a href="https://github.com/component/component/">https://github.com/component</a></li>
+  <li>npm + Browserify: <a href="http://browserify.org/">http://browserify.org/</a></li>
+</ul>
+</section>
+
+<section>
+<h2><img class="no-decoration" src="images/dependencies/bower.png" alt="Bower"></h2>
+</section>
+
+<section>
+<h2>Bower</h2>
+<ul>
+  <li>Command line interface written in Node.js</li>
+  <li>Open source under MIT Licence hosted on <a href="https://github.com/bower/bower">GitHub</a></li>
+  <li>Owned and supported by Twitter</li>
+  <li>Manage a flat tree dependency</li>
+  <li>Runs over Git</li>
+</ul>
+</section>
+
+<section>
+<h2>bower.json</h2>
+
+<pre><code class="hljs bash" data-trim>
+$ # the "Inception" of packet manager!
+$ aptitude install npm && npm install -g bower
+$ # create bower.json
+$ bower init
+</code></pre>
+
+<pre><code class="hljs javascript" data-trim>
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "name": "version",
+    "name": "folder",
+    "name": "package"
+  },
+  "devDependencies": {
+    "test-framework-name": "version"
+  }
+}
+</code></pre>
+</section>
+
+<section>
+<h2>The dark side of Bower</h2>
+
+<ul class="pros">
+  <li>Definitely a great tool! ... but</li>
+</ul>
+<br/>
+<ul class="cons">
+  <li>No convention, just domination!</li>
+  <li>Flat tree dependency is hard to keep consitent</li>
+  <li>Works bad with Grunt when exports are mis configured</li>
+  <li>GitHub is not reliable!</li>
+</ul>
+</section>
