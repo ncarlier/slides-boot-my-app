@@ -8,7 +8,7 @@ module.exports =
       'js/*.js'
     ]
     options:
-      livereload: true
+      livereload: not process.env.OPENSHIFT_APP_UUID?
 
   index:
     files: [
