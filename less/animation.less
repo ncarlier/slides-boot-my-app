@@ -1,0 +1,68 @@
+/**
+ * Animations
+ */
+
+// Imports
+@import "prefixer.less";
+
+// Variables
+@color-in: #fff;
+@color-out: rgba(255,255,255,0.2);
+@shadow-min-width: 20px;
+@shadow-max-width: 100px;
+
+// Parametric Mixin for colorcycle keyframes
+.colorcycle-keyframes (@color-in:#fff, @color-out:#eee) {
+  0%   {text-shadow: 0 0 @shadow-max-width @color-in; }
+  50%  {text-shadow: 0 0 @shadow-min-width @color-out; }
+  100% {text-shadow: 0 0 @shadow-max-width @color-in; }
+}
+
+// Vendors keyframes definitions
+@-webkit-keyframes colorcycle {.colorcycle-keyframes(@color-in, @color-out);}
+@-moz-keyframes colorcycle {.colorcycle-keyframes(@color-in, @color-out);}
+@-ms-keyframes colorcycle {.colorcycle-keyframes(@color-in, @color-out);}
+@-o-keyframes colorcycle {.colorcycle-keyframes(@color-in, @color-out);}
+@keyframes colorcycle {.colorcycle-keyframes(@color-in, @color-out);}
+
+// Colorcycle animation class
+.colorcycle-anim {
+  .animation(colorcycle 2s infinite linear);
+}
+
+// Mixin for blink keyframes
+.blink-keyframes () {
+  from { opacity: 1.0; }
+  to   { opacity: 0.0; }
+}
+
+// Vendors keyframes definitions
+@-webkit-keyframes blinker {.blink-keyframes;}
+@-moz-keyframes blinker {.blink-keyframes;}
+@-ms-keyframes blinker {.blink-keyframes;}
+@-o-keyframes blinker {.blink-keyframes;}
+@keyframes blinker {.blink-keyframes;}
+
+// Blink animation class
+.blink-anim {
+  text-decoration:blink;
+  .animation(blinker 1s infinite cubic-bezier(1.0,0,0,1.0));
+}
+
+// Mixin for rotate keyframes
+.rotate-keyframes () {
+  from { .rotate(0deg); }
+  to   { .rotate(360deg); }
+}
+
+// Vendors keyframes definitions
+@-webkit-keyframes rotate {.rotate-keyframes;}
+@-moz-keyframes rotate {.rotate-keyframes;}
+@-ms-keyframes rotate {.rotate-keyframes;}
+@-o-keyframes rotate {.rotate-keyframes;}
+@keyframes rotate {.rotate-keyframes;}
+
+// Blink animation class
+.rotate-anim {
+  .animation(rotate 2s infinite linear);
+}

@@ -1,0 +1,85 @@
+<section>
+<h2>Build Process</h2>
+</section>
+
+<section>
+<h2>Some popular task runners</h2>
+<ul>
+  <li>Grunt: <a href="http://gruntjs.com/">http://gruntjs.com</a></li>
+  <li>Gulp: <a href="http://gulp.com/">http://gulpjs.com</a></li>
+</ul>
+</section>
+
+<section>
+<h2><img class="no-decoration" src="images/build/grunt.png" alt="Grunt"></h2>
+</section>
+
+<section>
+<h2>Grunt</h2>
+<ul>
+  <li>Command line interface written in Node.js</li>
+  <li>Open source under MIT Licence hosted on <a href="https://github.com/gruntjs/">GitHub</a></li>
+  <li>Sponsored by <a href="http://bocoup.com/">Bocoup</a></li>
+  <li>Over 2700 plugins!</li>
+</ul>
+</section>
+
+<section>
+<h2>Grunt : Popular plugins</h2>
+<ul>
+  <li><strong>uglify</strong>: Minify files with Uglify.JS</li>
+  <li><strong>jshint</strong>: Validate files with JSHint</li>
+  <li><strong>watch</strong>: Run predefined tasks whenever watched file changed.</li>
+  <li><strong>coffee</strong>: Compile CoffeeScript files to Javascript</li>
+  <li><strong>connect</strong>: Start connect (node.js) web server</li>
+  <li><strong>less</strong>: Compile LESS files to CSS</li>
+  <li><strong>imagemin</strong>: Minify images</li>
+  <li>and many more...</li>
+</ul>
+</section>
+
+<section>
+<h2>Configuration: Gruntfile.(js|cofee)</h2>
+
+<pre><code class="hljs javascript no-scroll" data-trim>
+module.exports = function(grunt) {
+  // Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      build: {
+        src: 'src/<%= pkg.name %>.js',
+        dest: 'build/<%= pkg.name %>.min.js'
+      }
+    }
+  });
+
+  // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  // Default task(s).
+  grunt.registerTask('default', ['uglify']);
+};
+</code></pre>
+</section>
+
+<section>
+<h2>Grunt CLI</h2>
+
+<img class="no-decoration" src="images/build/grunt-cli.png" alt="Grunt CLI">
+</section>
+
+<section>
+<h2>Some advices</h2>
+
+<ul class="tips">
+  <li>Use variables</li>
+  <li>Split the Gruntfile</li>
+  <li>Watch every resources you can</li>
+  <li>Dive into the plugins sea</li>
+  <li>Use grunt as ... a task runners</li>
+  <li>runners</li>
+</ul>
+</section>

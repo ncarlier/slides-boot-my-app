@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run --volumes-from BOOT_MY_APP_VOLUMES -i -t --rm --entrypoint="/bin/bash" nunux/boot-my-app -c /bin/bash

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run --name boot-my-app -p 9001:9000 -p 35729:35729 --volumes-from BOOT_MY_APP_VOLUMES -i -t --rm nunux/boot-my-app start
