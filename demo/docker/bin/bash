@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --volumes-from BOOT_MY_APP_DEMO_VOLUMES -p 9002:9000 -i -t --rm --entrypoint="/bin/bash" nunux/boot-my-app-demo -c /bin/bash
+docker run -p 9002:9000 -i -t --rm --entrypoint="/bin/bash" nunux/boot-my-app-demo:demo -c /bin/bash
