@@ -7,4 +7,4 @@ module.exports =
       hostname: process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
       base: '.'
       open: true
-      livereload: true
+      livereload: process.env.NODE_ENV isnt 'production'

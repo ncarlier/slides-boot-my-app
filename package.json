@@ -17,7 +17,8 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "start": "node_modules/.bin/grunt",
-    "test": "node_modules/.bin/grunt test"
+    "postinstall": "grunt dist",
+    "start": "grunt",
+    "test": "grunt test"
   }
 }
