@@ -1,3 +1,0 @@
-#!/bin/bash
-
-docker run -p 9002:9000 -i -t --rm --entrypoint="/bin/bash" nunux/boot-my-app-demo:demo -c /bin/bash

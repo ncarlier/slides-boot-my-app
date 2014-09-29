@@ -1,3 +1,0 @@
-#!/bin/bash
-
-docker run --name boot-my-app-demo -p 9002:9000 -i -t --rm --entrypoint="/usr/bin/npm"  nunux/boot-my-app-demo:demo start
