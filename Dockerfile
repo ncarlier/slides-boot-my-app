@@ -7,10 +7,11 @@ FROM ncarlier/nodejs
 MAINTAINER Nicolas Carlier <https://github.com/ncarlier>
 
 # Install Yo
-RUN npm install -g yo generator-reveal
+RUN npm install -g yo generator-reveal generator-angular
 
 # Port
 EXPOSE 9000
+EXPOSE 35729
 
 # Add files
 ADD . /opt/slides-boot-my-app

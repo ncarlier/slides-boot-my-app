@@ -8,7 +8,7 @@ IMAGE:=$(USERNAME)/$(APPNAME)
 define docker_run_flags
 --rm \
 --env-file $(PWD)/etc/env.conf \
--P \
+-p 35729:35729 \
 -i -t
 endef
 
