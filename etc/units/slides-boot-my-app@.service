@@ -1,0 +1,13 @@
+[Unit]
+Description=Boot My App talk
+After=docker.service
+Requires=docker.service
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill %p
+ExecStartPre=-/usr/bin/docker rm %p
+ExecStart=/usr/bin/docker run --rm --name %p --env-file /media/data/boot-my-app/env.conf -P ncarlier/slides-boot-my-app
+ExecStop=/usr/bin/docker stop %p
+
+[X-Fleet]
+X-Conflicts=%p@*.service
